@@ -56,32 +56,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ji9-2Q-ajh">
-                                <rect key="frame" x="67" y="178" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stlouis" translatesAutoresizingMaskIntoConstraints="NO" id="ji9-2Q-ajh">
+                                <rect key="frame" x="50" y="114" width="275" height="255"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2r-mu-8C2">
-                                <rect key="frame" x="76" y="361" width="223" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2r-mu-8C2">
+                                <rect key="frame" x="62.5" y="438" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="06p-eV-8Ly"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add emojis" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9Z-JR-y9o">
-                                <rect key="frame" x="76" y="437" width="223" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add emojis" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9Z-JR-y9o">
+                                <rect key="frame" x="62.5" y="511" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="CZm-Kb-7it"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N06-CI-N6q">
-                                <rect key="frame" x="143" y="514" width="89" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N06-CI-N6q">
+                                <rect key="frame" x="125" y="582" width="125" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="VQo-Md-bPn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d9Z-JR-y9o" firstAttribute="top" secondItem="V2r-mu-8C2" secondAttribute="bottom" constant="43" id="2E0-7E-dCd"/>
+                            <constraint firstItem="V2r-mu-8C2" firstAttribute="centerX" secondItem="24O-eL-edd" secondAttribute="centerX" id="400-ba-mQz"/>
+                            <constraint firstItem="N06-CI-N6q" firstAttribute="top" secondItem="d9Z-JR-y9o" secondAttribute="bottom" constant="41" id="9Cl-Tk-hQR"/>
+                            <constraint firstItem="ji9-2Q-ajh" firstAttribute="leading" secondItem="GW3-Qx-wph" secondAttribute="leading" constant="50" id="C0z-dH-9TW"/>
+                            <constraint firstItem="V2r-mu-8C2" firstAttribute="top" secondItem="ji9-2Q-ajh" secondAttribute="bottom" constant="69" id="Ctv-YI-isp"/>
+                            <constraint firstItem="GW3-Qx-wph" firstAttribute="trailing" secondItem="ji9-2Q-ajh" secondAttribute="trailing" constant="50" id="GCm-4j-dDT"/>
+                            <constraint firstItem="N06-CI-N6q" firstAttribute="centerX" secondItem="24O-eL-edd" secondAttribute="centerX" id="NUU-WH-jO5"/>
+                            <constraint firstItem="ji9-2Q-ajh" firstAttribute="leading" secondItem="GW3-Qx-wph" secondAttribute="leading" constant="50" id="eSo-AU-0NH"/>
+                            <constraint firstItem="d9Z-JR-y9o" firstAttribute="centerX" secondItem="24O-eL-edd" secondAttribute="centerX" id="kWU-Ms-KTK"/>
+                            <constraint firstItem="ji9-2Q-ajh" firstAttribute="top" secondItem="GW3-Qx-wph" secondAttribute="top" constant="50" id="qaH-6X-wZB"/>
+                            <constraint firstItem="ji9-2Q-ajh" firstAttribute="top" secondItem="GW3-Qx-wph" secondAttribute="top" constant="50" id="te0-WM-DPd"/>
+                            <constraint firstItem="GW3-Qx-wph" firstAttribute="trailing" secondItem="ji9-2Q-ajh" secondAttribute="trailing" constant="50" id="w6z-qD-lha"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GW3-Qx-wph"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add a photo" id="efc-zS-QY9">
@@ -113,4 +132,7 @@
             <point key="canvasLocation" x="26.399999999999999" y="172.26386806596702"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stlouis" width="400" height="255"/>
+    </resources>
 </document>
