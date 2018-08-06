@@ -51,7 +51,7 @@
         <scene sceneID="M93-RP-Mb1">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wk-e8-ara" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="AXB-ck-kfC" sceneMemberID="viewController">
+                <viewController id="AXB-ck-kfC" customClass="AddPhotoViewController" customModule="theWeeknd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24O-eL-edd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +84,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveTapped:" destination="AXB-ck-kfC" eventType="touchUpInside" id="tgW-9H-DeH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,10 +108,23 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add a photo" id="efc-zS-QY9">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="a2f-Dn-wLp"/>
-                            <barButtonItem systemItem="organize" id="yeu-FC-lFb"/>
+                            <barButtonItem systemItem="camera" id="a2f-Dn-wLp">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="AXB-ck-kfC" id="DX7-CL-7Ia"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="yeu-FC-lFb">
+                                <connections>
+                                    <action selector="photoLibraryTapped:" destination="AXB-ck-kfC" id="0lQ-7Q-dFf"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="caption" destination="V2r-mu-8C2" id="Nb5-Go-wqG"/>
+                        <outlet property="emojis" destination="d9Z-JR-y9o" id="2KV-7A-uob"/>
+                        <outlet property="imageView" destination="ji9-2Q-ajh" id="zk3-ft-SsT"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1652" y="171.36431784107947"/>
