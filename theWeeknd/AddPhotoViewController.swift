@@ -13,7 +13,8 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     var imagePicker = UIImagePickerController()
     
     
-    @IBOutlet weak var imageHolder: UIImageView!
+    
+    @IBOutlet weak var photoContainer: UIImageView!
     @IBOutlet weak var caption: UITextField!
     @IBOutlet weak var emojis: UITextField!
     
@@ -26,8 +27,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            print("we in")
-            imageHolder.image = selectedImage
+            photoContainer.image = selectedImage
         }
         dismiss(animated: true, completion: nil)
     }
@@ -43,6 +43,20 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func saveTapped(_ sender: UIButton) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let photoToSave = Photo(entity: Photo.entity(), insertInto: context)
+            photoToSave.caption = caption.text
+            photoToSave.emoji = emojis.text
+            
+            if let userImage = photoContainer.image {
+                if let userImageData = UIImagePNGRepresentation(userImage) {
+                    photoToSave.imageData = userImageData
+                }
+            }
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            
+            navigationController?.popViewController(animated: true)
+        }
     }
     
 }
