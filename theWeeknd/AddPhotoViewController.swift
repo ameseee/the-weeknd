@@ -35,5 +35,12 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func saveTapped(_ sender: UIButton) {
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = selectedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
 
 }
