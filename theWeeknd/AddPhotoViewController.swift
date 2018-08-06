@@ -12,7 +12,8 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     
     var imagePicker = UIImagePickerController()
     
-    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var imageHolder: UIImageView!
     @IBOutlet weak var caption: UITextField!
     @IBOutlet weak var emojis: UITextField!
     
@@ -21,6 +22,14 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.delegate = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            print("we in")
+            imageHolder.image = selectedImage
+        }
+        dismiss(animated: true, completion: nil)
     }
 
     @IBAction func photoLibraryTapped(_ sender: Any) {
@@ -36,11 +45,4 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func saveTapped(_ sender: UIButton) {
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = selectedImage
-        }
-        dismiss(animated: true, completion: nil)
-    }
-
 }
