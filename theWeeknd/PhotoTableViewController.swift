@@ -37,15 +37,16 @@ class PhotoTableViewController: UITableViewController {
         getPhotos()
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return photos.count
+//    }
 
+    // MAKE SURE THIS IS IN THE TUTORIAL!!!
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return photos.count
     }
+    // MAKE SURE THIS IS IN THE TUTORIAL!!!
+
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,6 +61,20 @@ class PhotoTableViewController: UITableViewController {
         }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "moveToDetail", sender: photos[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "moveToDetail" {
+            if let photoDetailView = segue.destination as? DeetsViewController {
+                if let photoToSend = sender as? Photo {
+                    photoDetailView.photo = photoToSend
+                }
+            }
+        }
     }
 
 

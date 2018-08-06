@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		874F5D382118E7DC00EC9D4A /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874F5D372118E7DC00EC9D4A /* PhotoTableViewController.swift */; };
+		874F5D3A211907E800EC9D4A /* DeetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874F5D39211907E800EC9D4A /* DeetsViewController.swift */; };
 		87F91F7C2117E02F00387DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F91F7B2117E02F00387DA3 /* AppDelegate.swift */; };
 		87F91F812117E02F00387DA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F91F7F2117E02F00387DA3 /* Main.storyboard */; };
 		87F91F842117E02F00387DA3 /* theWeeknd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87F91F822117E02F00387DA3 /* theWeeknd.xcdatamodeld */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		874F5D372118E7DC00EC9D4A /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
+		874F5D39211907E800EC9D4A /* DeetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeetsViewController.swift; sourceTree = "<group>"; };
 		87F91F782117E02F00387DA3 /* theWeeknd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theWeeknd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F91F7B2117E02F00387DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87F91F802117E02F00387DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				874F5D372118E7DC00EC9D4A /* PhotoTableViewController.swift */,
 				87F91F7B2117E02F00387DA3 /* AppDelegate.swift */,
 				87F91F7F2117E02F00387DA3 /* Main.storyboard */,
+				874F5D39211907E800EC9D4A /* DeetsViewController.swift */,
 				87F91F902117E90200387DA3 /* AddPhotoViewController.swift */,
 				87F91F852117E03000387DA3 /* Assets.xcassets */,
 				87F91F872117E03000387DA3 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				87F91F912117E90200387DA3 /* AddPhotoViewController.swift in Sources */,
 				874F5D382118E7DC00EC9D4A /* PhotoTableViewController.swift in Sources */,
 				87F91F7C2117E02F00387DA3 /* AppDelegate.swift in Sources */,
+				874F5D3A211907E800EC9D4A /* DeetsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
