@@ -141,19 +141,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wru-g4-qLI">
-                                <rect key="frame" x="15" y="79" width="345" height="448"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wru-g4-qLI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5hv-tX-0tX" firstAttribute="bottom" secondItem="wru-g4-qLI" secondAttribute="bottom" constant="140" id="4eQ-ZS-gMl"/>
-                            <constraint firstItem="wru-g4-qLI" firstAttribute="top" secondItem="5hv-tX-0tX" secondAttribute="top" constant="15" id="JFp-NO-BLH"/>
-                            <constraint firstItem="wru-g4-qLI" firstAttribute="top" secondItem="5hv-tX-0tX" secondAttribute="top" constant="15" id="QfS-95-6LX"/>
-                            <constraint firstItem="wru-g4-qLI" firstAttribute="leading" secondItem="5hv-tX-0tX" secondAttribute="leading" constant="15" id="Qsd-uh-n4a"/>
-                            <constraint firstItem="5hv-tX-0tX" firstAttribute="trailing" secondItem="wru-g4-qLI" secondAttribute="trailing" constant="15" id="YyL-W6-nZT"/>
-                            <constraint firstItem="wru-g4-qLI" firstAttribute="leading" secondItem="5hv-tX-0tX" secondAttribute="leading" constant="15" id="fmd-3S-gml"/>
-                            <constraint firstItem="5hv-tX-0tX" firstAttribute="trailing" secondItem="wru-g4-qLI" secondAttribute="trailing" constant="15" id="nSB-Rd-Xd8"/>
+                            <constraint firstItem="wru-g4-qLI" firstAttribute="trailing" secondItem="5hv-tX-0tX" secondAttribute="trailing" id="KeG-uD-GxP"/>
+                            <constraint firstItem="wru-g4-qLI" firstAttribute="bottom" secondItem="5hv-tX-0tX" secondAttribute="bottom" id="aVL-se-Ba0"/>
+                            <constraint firstItem="wru-g4-qLI" firstAttribute="top" secondItem="5hv-tX-0tX" secondAttribute="top" id="avG-8b-nXw"/>
+                            <constraint firstItem="wru-g4-qLI" firstAttribute="leading" secondItem="5hv-tX-0tX" secondAttribute="leading" id="ibZ-yF-o18"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5hv-tX-0tX"/>
                     </view>
