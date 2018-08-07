@@ -36,7 +36,9 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            photoContainer.image = selectedImage
+//            photoContainer.image = selectedImage
+            let fixedImage = ImageUtilities.fixImageOrientation(imageSource: selectedImage)
+            photoContainer.image = fixedImage
         }
         dismiss(animated: true, completion: nil)
     }
