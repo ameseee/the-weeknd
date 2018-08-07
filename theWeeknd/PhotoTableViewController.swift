@@ -37,17 +37,9 @@ class PhotoTableViewController: UITableViewController {
         getPhotos()
     }
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return photos.count
-//    }
-
-    // MAKE SURE THIS IS IN THE TUTORIAL!!!
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photos.count
     }
-    // MAKE SURE THIS IS IN THE TUTORIAL!!!
-
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
